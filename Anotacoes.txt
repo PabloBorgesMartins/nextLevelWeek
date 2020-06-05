@@ -1,0 +1,36 @@
+SERVER----------------------
+
+npm init -y
+npm install express
+npm install @types/express -D
+npm install ts-node -D
+npm install typescript -D
+npx tsc --init
+npx ts-node src/server.ts
+npm install ts-node-dev -D
+npm install knex
+npm install sqlite3
+npx knex migrate:latest --knexfile knexfile.ts migrate:latest
+npm run knex --knexfile knexfile.ts seed:run
+ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts	-> script para aumentar velocidade de recarregamento do server
+const trx -> esse transaction é utilizado para quando vai fazer duas inserçoes diferentes em uma mesma rota e precisa garantir o funcionamento das duas. Para ele, sempre deve-se usar await trx.commit() para ele inserir as operacoes feitas no banco
+npm install cors
+
+
+REACT---------------------
+
+npx create-react-app web --template=typescript	-> Iniciar uma apliacao ReactJs utilizando TS
+npm install react-icons		-> Para usar icones dentro da aplicacao
+npm install react-router-dom	-> Para fazer roteamento dentro da aplicacao
+npm install leaflet react-leaflet	-> Para utilizar mapa dentro da aplicacao
+npm install @types/react-leaflet	-> Utilizado pelo typescript para tipagem do código
+npm install axios	-> Conectar front end ao backend
+////////////SEMPRE QUE CRIAR UM ARRAY OU OBJETO, PRECISAMOS INFORMAR O TIPO DA VARIÁVEL
+
+
+
+
+
+REACT-NATIVE-----------------------------
+npm install -g expo-cli
+expo init mobile
