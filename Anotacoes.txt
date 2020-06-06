@@ -15,6 +15,8 @@ npm run knex --knexfile knexfile.ts seed:run
 ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts	-> script para aumentar velocidade de recarregamento do server
 const trx -> esse transaction é utilizado para quando vai fazer duas inserçoes diferentes em uma mesma rota e precisa garantir o funcionamento das duas. Para ele, sempre deve-se usar await trx.commit() para ele inserir as operacoes feitas no banco
 npm install cors
+npm install multer	-> utilizada para realizer uploads de imagens
+
 
 
 REACT---------------------
@@ -25,7 +27,8 @@ npm install react-router-dom	-> Para fazer roteamento dentro da aplicacao
 npm install leaflet react-leaflet	-> Para utilizar mapa dentro da aplicacao
 npm install @types/react-leaflet	-> Utilizado pelo typescript para tipagem do código
 npm install axios	-> Conectar front end ao backend
-////////////SEMPRE QUE CRIAR UM ARRAY OU OBJETO, PRECISAMOS INFORMAR O TIPO DA VARIÁVEL
+npm install react-dropzone	-> utilizado para fazer upload de imagem
+////////////SEMPRE QUE CRIAR UM ARRAY OU OBJETO, PRECISAMOS INFORMAR O TIPO DA VARIÁVEL em typescript
 
 
 
@@ -34,3 +37,12 @@ npm install axios	-> Conectar front end ao backend
 REACT-NATIVE-----------------------------
 npm install -g expo-cli
 expo init mobile
+expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+npm install @react-navigation/native		-> Ler a documentacao e instalar todas dependencias do react-navigation
+npm install @react-navigation/stack
+expo install react-native-maps
+expo install expo-constants
+expo install react-native-svg
+npm install axios
+expo install expo-location	-> utilizado para captar geolocalizacao
+expo install expo-mail-composer
