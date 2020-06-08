@@ -16,6 +16,8 @@ ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts	-> script 
 const trx -> esse transaction é utilizado para quando vai fazer duas inserçoes diferentes em uma mesma rota e precisa garantir o funcionamento das duas. Para ele, sempre deve-se usar await trx.commit() para ele inserir as operacoes feitas no banco
 npm install cors
 npm install multer	-> utilizada para realizer uploads de imagens
+npm install celebrate
+npm install @types/hapi__joi
 
 
 
@@ -46,3 +48,13 @@ expo install react-native-svg
 npm install axios
 expo install expo-location	-> utilizado para captar geolocalizacao
 expo install expo-mail-composer
+
+
+
+DEPLOY------------------------
+backend	-> Heroku(Aplicaçoes de teste)
+	-> Digital Ocean(Aplicaçoes pequenas)
+	-> AWS/Google Cloud/Microsoft Azure(Aplicaçoes grandes)
+
+frontend	->Netfly/Vercel (grátis para aplicaçoes pequenas)
+		->Amazon S3/Google Cloud Storage(aplicaçoes grandes)
